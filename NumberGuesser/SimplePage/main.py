@@ -30,12 +30,8 @@ if st.button("Submit Guess"):
             st.write("You guessed it in 1, you are a master guesser!")
         elif st.session_state.attempts <= 3:
             st.write("You got it in 3 or less attempts, youre pretty good.")
-        elif st.session_state.attempts <= 5:
-            st.write("You got it in 5 or less attempts, youre alright.")
-        elif st.session_state.attempts <= 7:
-            st.write("You got it in 7 or less attempts, you should probably get better.")
-        elif st.session_state.attempts <= 10:
-            st.write("You got it in 10 or less attempts, how is this even possible??")
+        elif st.session_state.attempts >= 10:
+            st.write("It took you 10 or more tries, get better lol")
 
 #Reset the game
 if guess == st.session_state.random_number:

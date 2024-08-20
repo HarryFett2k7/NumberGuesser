@@ -11,11 +11,11 @@ ask = st.text_input("What do you want the highest number to be?")
 askint = int(ask)
 
 if "random_number" not in st.session_state:
-    st.session_state.random_number = random.randint(1, 10)
+    st.session_state.random_number = random.randint(1, askint)
     st.session_state.attempts = 0
 
 #User input for guessing the number
-guess = st.number_input("Guess the number (between 1 and " + ask + "):", min_value=1, max_value=askint, step=1)
+guess = st.number_input("Guess the number (between 1 and " + ask + "):", min_value=1, max_value= askint, step=1)
 
 #Button to submit the guess
 if st.button("Submit Guess"):

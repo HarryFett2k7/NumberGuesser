@@ -7,7 +7,7 @@ st.subheader("A simple number guessing game.")
 
 #Initialize session state to store the random number and attempts
 
-ask = st.text_input("What do you want the highest number to be?")
+ask = st.number_input("What do you want the highest number to be?")
 askint = int(ask)
 
 if "random_number" not in st.session_state:

@@ -40,7 +40,7 @@ if st.button("Submit Guess"):
 #Reset the game
 if guess == st.session_state.random_number:
     if st.button("Play Again"):
-        st.session_state.random_number = random.randint(1, 10)
+        st.session_state.random_number = random.randint(1, ask)
         st.session_state.attempts = 0
 
 
